@@ -1,21 +1,17 @@
-#include<stdio.h>
-/**
- * main -entry point
- *
- * description : this app print all letters
- *
- * return: 0 success)
- */
+#include <stdio.h>
 
+/**
+ * main - Prints the alphabetic
+ *
+ * Return: Always (Success)
+ */
 int main(void)
 {
-	char ch = 'a';
+	char c;
 
-	while (ch <= 'z')
-	{
-		putchar(ch);
-		ch++;
-	}
+	for (c = 'a'; c <= 'z'; c++)
+		putchar(c);
+
 	putchar('\n');
 	return (0);
-
+}
