@@ -1,32 +1,39 @@
-#include <stdlib.h>
-#include <time.h>
-#include <stdio.h>
+#include<stdio.h>
 
 /**
  * main - Entry point
  *
- * Description: print the value of n status:
- *              greater than, is zero and is not less than 6.
+ * Description: print all possible different
+ *           combinations of two digits.
  *
- * Return: Always O (Success)
+ * Return: Always 0 (Success)
 */
 
 int main(void)
 {
-	int n, digit;
+	int digit1 = 0, digit2;
 
-	srand(time(0));
-	n = rand() - RAND_MAX / 2;
+	while (digit1 <= 9)
+	{
+		digit2 = 0;
+		while (digit2 <= 9)
+		{
+			if (digit1 != digit2 && digit1 < digit2)
+			{
+				putchar(digit1 + 48);
+				putchar(digit2 + 48);
 
-	/*my code*/
-	digit = n % 10; /*gets last digit*/
-
-	if (digit > 5)
-		printf("Last digit of %i is %i and is greater than 5\n", n, digit);
-	else if (digit == 0)
-		printf("Last digit of %i is %i and is 0\n", n, digit);
-	else if (digit < 6 && digit != 0)
-		printf("Last digit of %i is %i and is less than 6 and not 0\n", n, digit);
+				if (digit1 + digit2 != 17)
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
+			++digit2;
+		}
+		++digit1;
+	}
+	putchar('\n');
 
 	return (0);
 }
