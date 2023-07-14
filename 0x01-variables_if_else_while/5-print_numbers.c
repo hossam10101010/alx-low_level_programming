@@ -1,19 +1,20 @@
-#include<stdio.h>
-/**
- * main -entry point
- *
- * description : this app print all letters
- *
- * return: 0 success)
- */
+#include <stdio.h>
 
+/**
+  * main - Prints the numbers since 0 to 9
+  *
+  * Return: Always (Success)
+  */
 int main(void)
 {
-	int d = '0';
-	while (d <= '9')
+	char n;
+
+	for (n = '0'; n <= '9'; n++)
 	{
-		printf("%i", d);
-		d++;
+		putchar(n);
 	}
-	printf('\n');
+
+	putchar('\n');
+
 	return (0);
+}
