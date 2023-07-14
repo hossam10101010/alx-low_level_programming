@@ -1,29 +1,25 @@
-#include<stdio.h>
-/**
- * main -entry point
- *
- * description : this app print all letters upper and lower case
- *
- * return: 0 success)
- */
+#include <stdio.h>
 
+/**
+ * main - Prints the alphabetic in lower and upper case
+ *
+ * Return: Always (Success)
+ */
 int main(void)
 {
-	char ch = 'a'
+	char c;
 
-	while (ch <= 'z')
+	for (c = 'a'; c <= 'z'; c++)
 	{
-		putchar(ch);
-		ch++;
+		putchar(c);
 	}
-	putchar('\n');
-	/* from A-Z*/
-	char CH = 'A';
 
-	while (CH <= 'Z')
+	for (c = 'A'; c <= 'Z'; c++)
 	{
-		putchar(CH);
-		CH++;
+		putchar(c);
 	}
+
 	putchar('\n');
+
 	return (0);
+}
