@@ -1,39 +1,32 @@
-#include<stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <stdio.h>
 
 /**
- * main - Entry point
+ * main - Prints a text according number
  *
- * Description: print all possible different
- *           combinations of two digits.
- *
- * Return: Always 0 (Success)
-*/
-
+ * Return: Always (Success)
+ */
 int main(void)
 {
-	int digit1 = 0, digit2;
+	int n, lastd;
 
-	while (digit1 <= 9)
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
+	lastd = n % 10;
+
+	if (lastd > 5)
 	{
-		digit2 = 0;
-		while (digit2 <= 9)
-		{
-			if (digit1 != digit2 && digit1 < digit2)
-			{
-				putchar(digit1 + 48);
-				putchar(digit2 + 48);
-
-				if (digit1 + digit2 != 17)
-				{
-					putchar(',');
-					putchar(' ');
-				}
-			}
-			++digit2;
-		}
-		++digit1;
+		printf("Last digit of %d is %d and is greater than 5\n", n, lastd);
 	}
-	putchar('\n');
+	else if (lastd == 0)
+	{
+		printf("Last digit of %d is %d and is 0\n", n, lastd);
+	}
+	else if (lastd < 6 && lastd != 0)
+	{
+		printf("Last digit of %d is %d and is less than 6 and not 0\n", n, lastd);
+	}
 
 	return (0);
 }
