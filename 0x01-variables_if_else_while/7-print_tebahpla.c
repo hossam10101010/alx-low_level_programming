@@ -1,20 +1,20 @@
-#include<stdio.h>
-/**
- * main -entry point
- *
- * description : this app print all letters
- *
- * return: 0 success)
- */
+#include <stdio.h>
 
+/**
+  * main - Prints the alphabet at reverse
+  *
+  * Return: Always (Success)
+  */
 int main(void)
 {
-	char ch = 'z';
+	char c;
 
-	while (ch <= 'a')
+	for (c = 'z'; c >= 'a'; c--)
 	{
-		putchar(ch);
-		ch--;
+		putchar(c);
 	}
+
 	putchar('\n');
+
 	return (0);
+}
